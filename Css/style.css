@@ -207,7 +207,7 @@ header {
 
 .users-numbers {
     display: flex;
-    margin-top: 55vh;
+    margin-top: 75vh;
     justify-content: center;
     align-items: center;
     background-color: white;
@@ -1874,4 +1874,5 @@ p {
         background: white;
         color: black;
     }
+
 }
