@@ -144,7 +144,6 @@ body {
 }
 
 
-/* Smooth color transitions */
 .navbar, header, .hero-right .enroll-now {
     transition: background-color 0.3s ease;
 }
@@ -184,7 +183,6 @@ body {
     background-color: #666;
 }
 
-/* Mobile menu overlay */
 .mobile-menu-overlay {
     position: fixed;
     top: 0;
@@ -2302,3 +2300,4 @@ p {
 body, .container {
     transition: background-color 0.3s ease;
 }
+
