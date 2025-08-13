@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monac</title>
+    <!-- Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- Font Family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+        <!-- Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisb2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Css Link -->
@@ -21,11 +25,39 @@
 </head>
 
 <body>
+    <!-- Fixed Color Customization Panel -->
+    <div class="color-panel" id="colorPanel">
+        <div class="color-panel-toggle" id="colorPanelToggle">
+            <i class="ri-palette-line"></i>
+        </div>
+        <div class="color-panel-content" id="colorPanelContent">
+            <div class="color-options">
+                <div class="color-option" data-color="#f9c265" style="background-color: #f9c265;"></div>
+                <div class="color-option" data-color="#4CAF50" style="background-color: #4CAF50;"></div>
+                <div class="color-option" data-color="#2196F3" style="background-color: #2196F3;"></div>
+                <div class="color-option" data-color="#9C27B0" style="background-color: #9C27B0;"></div>
+                <div class="color-option" data-color="#FF5722" style="background-color: #FF5722;"></div>
+                <div class="color-option" data-color="#607D8B" style="background-color: #607D8B;"></div>
+            </div>
+            <button class="reset-color-btn" id="resetColorBtn">Reset Color</button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
     <header>
         <!-- Start Navbar -->
         <nav class="navbar">
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <!-- Left Navigation -->
-            <div class="nav-left">
+            <div class="nav-left" id="navLeft">
                 <a href="#" class="nav-link">Home</a>
                 <a href="#" class="nav-link">About</a>
                 <a href="#" class="nav-link">Services</a>
@@ -39,9 +71,24 @@
             </div>
 
             <!-- Right Navigation -->
-            <div class="nav-right">
+            <div class="nav-right" id="navRight">
                 <a href="#" class="nav-link">Log In</a>
                 <a href="#" class="nav-link-signup">Sign Up</a>
+
+<ul>
+    <li class="toggle-icon-mode">
+        <i class="ri-sun-line"></i>
+        <div class="dropdown-menu account-dropdown">
+            <div class="dropdown-item">
+                <a href="#" class="dropdown-link light-mode"><i class="ri-sun-line"></i> Light</a>
+            </div>
+            <div class="dropdown-item">
+                <a href="#" class="dropdown-link dark-mode"><i class="ri-moon-line"></i> Dark</a>
+            </div>
+        </div>
+    </li>
+</ul>
+
             </div>
         </nav>
         <!-- End Navbar -->
@@ -123,7 +170,12 @@
         <!-- Get Certificate Section -->
         <div class="feature-card certificate-card">
             <div class="icon">
-                <i class="fa-solid fa-laptop-code"></i>
+                <div class="icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="4" width="18" height="12" rx="2" stroke="#666" stroke-width="2" fill="none" />
+                        <path d="M7 8h6M7 12h4" stroke="#666" stroke-width="2" />
+                    </svg>
+                </div>
             </div>
             <h4>Get Certificate</h4>
             <p>Add Value To Your Certificates And Increase Your Chances Of Getting Hired In Your Dream Job.</p>
@@ -241,7 +293,7 @@
                         </div>
                         <div class="step">
                             <div class="step-icon">
-                                <i class="fas fa-check"></i>
+                                <i class="fa-solid fa-check" style="color: #74C0FC;"></i>
                             </div>
                             <span>Purchase Lessons</span>
                         </div>
@@ -330,7 +382,7 @@
             </div>
         </div>
     </footer>
-
+<script src="js/script.js"></script>
 </body>
 
 </html>
